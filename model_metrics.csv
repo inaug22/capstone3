@@ -1,0 +1,13 @@
+Model,MAPE [%],Model Parameters,Comment
+ARIMA,34,p= 2; d=1; q= 1,No covariates
+SARIMAX 3 covariates,34,See ARIMA,Past and future covariates
+Darts ARIMA,34,See ARIMA,No covariates; uses statsmodels
+Darts TCN no covariates,36,input_chunk_length=288; output_chunk_length=16; n_epochs=10; weight_norm=True (defaults: kernel_size=3; num_filters=3; dilation_base=2; dropout=0.2),No covariates; uses torch
+Darts TCN no covariates,31,input_chunk_length=192;  output_chunk_length=16; n_epochs=5; weight_norm= False (defaults: kernel_size=3; num_filters=3; dilation_base=2; dropout=0.2),
+Darts TCN no covariates,32,input_chunk_length=192;  output_chunk_length=16; n_epochs=5; weight_norm= False; kernel_size=5; num_filters=6  (defaults: dilation_base=2; dropout=0.2),
+Darts TCN 1 covariate,37,input_chunk_length=288; output_chunk_length=16; n_epochs=10; weight_norm=True (defaults: kernel_size=3; num_filters=3; dilation_base=2; dropout=0.2),Past covariates only; uses torch
+Darts TCN 1 covariate,34,input_chunk_length=192;  output_chunk_length=16; n_epochs=5; weight_norm= False (defaults: kernel_size=3; num_filters=3; dilation_base=2; dropout=0.2),
+Darts TCN 1 covariate,35,input_chunk_length=192;  output_chunk_length=16; n_epochs=5; weight_norm= False; kernel_size=5; num_filters=6  (defaults: dilation_base=2; dropout=0.2),
+Darts TCN 3 covariates,35,input_chunk_length=288; output_chunk_length=16; n_epochs=10; weight_norm=True (defaults: kernel_size=3; num_filters=3; dilation_base=2; dropout=0.2),Past covariates only; uses torch
+Darts TCN 3 covariates,35,input_chunk_length=192;  output_chunk_length=16; n_epochs=5; weight_norm= False (defaults: kernel_size=3; num_filters=3; dilation_base=2; dropout=0.2),
+Darts TCN 3 covariates,31,input_chunk_length=192;  output_chunk_length=16; n_epochs=5; weight_norm= False; kernel_size=5; num_filters=6  (defaults: dilation_base=2; dropout=0.2),
